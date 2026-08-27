@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js with Custom Server
+
+A Next.js application integrated with Express.js custom server for advanced routing and API management.
+
+## Overview
+
+This project demonstrates how to use Next.js with a custom Express server instead of the default Next.js server. Useful for custom middleware, advanced routing, and backend integration.
+
+## Features
+
+- **Custom Express Server** - Full control over request handling and routing
+- **Next.js Framework** - React-based frontend with server-side rendering
+- **API Routes** - Organized backend API routes with Express
+- **Environment Support** - Development and production configurations
+- **Tailwind CSS** - Utility-first CSS framework for styling
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 16+ and npm/yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Server runs on [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Production
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `server.js` - Custom Express server entry point
+- `server/routes/` - API route definitions
+- `app/` - Next.js pages and components
+- `public/` - Static assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Next.js 13
+- Express.js
+- React 18
+- Tailwind CSS
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Authentication middleware is available but commented out for customization
+- Database connection (MongoDB) is configured but commented out
